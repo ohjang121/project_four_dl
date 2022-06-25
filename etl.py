@@ -83,7 +83,7 @@ def process_log_data(spark, input_data, output_data):
     
     # get filepath to log data file
     # 2 subdirectory with hashed file names - need 2 wildcards for comprehensive search
-    log_data = os.path.join(input_data, 'log_data/*/*.json')
+    log_data = os.path.join(input_data, 'log_data/*/*/*.json')
 
     # read log data file
     df = spark.read.json(log_data)
