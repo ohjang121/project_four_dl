@@ -36,3 +36,8 @@ spark-submit etl.py
 ```
 5. Check the Spark UI to ensure the tables are correctly written in the desired S3 bucket.
 
+## Follow-ups
+
+* Check autoincrement logic - used pyspark.sql.functions.monotonically_increasing_id, but tried using row_number() function directly in pyspark.sql initially which did not work. Any enhanced suggestions would be great!
+* Explanation on why local run does not work for this script, even just reading the json files from S3.
+* Decision to use SQL instead of methods
